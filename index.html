@@ -459,25 +459,23 @@
         }
 
         .service-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--primary-light), #bae6fd);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: 100%;
+            height: 140px;
+            border-radius: 15px;
+            overflow: hidden;
             margin: 0 auto 20px;
-            font-size: 2.5rem;
             transition: all 0.3s ease;
         }
 
-        .service-card:hover .service-icon {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            transform: scale(1.1) rotate(5deg);
+        .service-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.4s ease;
         }
 
-        .service-card:hover .service-icon span {
-            filter: brightness(0) invert(1);
+        .service-card:hover .service-icon img {
+            transform: scale(1.1);
         }
 
         .service-card h3 {
@@ -1310,42 +1308,47 @@
             </div>
             <div class="services-grid">
                 <div class="service-card animate-on-scroll">
-                    <div class="service-icon"><span>🦷</span></div>
-                    <h3>Teeth Cleaning & Scaling</h3>
-                    <p>Professional cleaning to remove plaque, tartar, and stains for a healthier, brighter smile.</p>
+                    <div class="service-icon"><img src="https://images.pexels.com/photos/6627536/pexels-photo-6627536.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Teeth Cleaning & Polishing"></div>
+                    <h3>Teeth Cleaning & Polishing</h3>
+                    <p>Professional cleaning and polishing to remove plaque, tartar, and stains for a healthier, brighter smile.</p>
                 </div>
                 <div class="service-card animate-on-scroll">
-                    <div class="service-icon"><span>🔧</span></div>
+                    <div class="service-icon"><img src="https://images.pexels.com/photos/6627578/pexels-photo-6627578.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Root Canal Treatment"></div>
                     <h3>Root Canal Treatment</h3>
                     <p>Pain-free root canal therapy to save infected teeth and eliminate discomfort.</p>
                 </div>
                 <div class="service-card animate-on-scroll">
-                    <div class="service-icon"><span>🔩</span></div>
+                    <div class="service-icon"><img src="https://images.pexels.com/photos/3845653/pexels-photo-3845653.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Dental Implants"></div>
                     <h3>Dental Implants</h3>
                     <p>Permanent tooth replacement solutions that look, feel, and function like natural teeth.</p>
                 </div>
                 <div class="service-card animate-on-scroll">
-                    <div class="service-icon"><span>😁</span></div>
+                    <div class="service-icon"><img src="https://images.pexels.com/photos/3762453/pexels-photo-3762453.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Braces & Aligners"></div>
                     <h3>Braces & Aligners</h3>
                     <p>Orthodontic treatments to straighten teeth and correct bite issues for all ages.</p>
                 </div>
                 <div class="service-card animate-on-scroll">
-                    <div class="service-icon"><span>✨</span></div>
+                    <div class="service-icon"><img src="https://images.pexels.com/photos/3779706/pexels-photo-3779706.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Teeth Whitening"></div>
                     <h3>Teeth Whitening</h3>
                     <p>Professional whitening treatments to brighten your smile several shades lighter.</p>
                 </div>
                 <div class="service-card animate-on-scroll">
-                    <div class="service-icon"><span>👶</span></div>
+                    <div class="service-icon"><img src="https://images.pexels.com/photos/3845810/pexels-photo-3845810.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Pediatric Dentistry"></div>
                     <h3>Pediatric Dentistry</h3>
                     <p>Gentle and caring dental services specially designed for children of all ages.</p>
                 </div>
                 <div class="service-card animate-on-scroll">
-                    <div class="service-icon"><span>💎</span></div>
+                    <div class="service-icon"><img src="https://images.pexels.com/photos/6528907/pexels-photo-6528907.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Dental Crown & Bridges"></div>
+                    <h3>Dental Crown & Bridges</h3>
+                    <p>Custom-made crowns and bridges to restore damaged teeth and fill gaps beautifully.</p>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon"><img src="https://images.pexels.com/photos/3845806/pexels-photo-3845806.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Cosmetic Dentistry"></div>
                     <h3>Cosmetic Dentistry</h3>
                     <p>Veneers, bonding, and smile makeovers to enhance your natural beauty.</p>
                 </div>
                 <div class="service-card animate-on-scroll">
-                    <div class="service-icon"><span>🚨</span></div>
+                    <div class="service-icon"><img src="https://images.pexels.com/photos/3881449/pexels-photo-3881449.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Emergency Dental Care"></div>
                     <h3>Emergency Dental Care</h3>
                     <p>Immediate care for dental emergencies including pain, trauma, and infections.</p>
                 </div>
@@ -1523,12 +1526,13 @@
                             <label for="service">Select Service</label>
                             <select id="service" name="service">
                                 <option value="">Choose a service</option>
-                                <option value="Teeth Cleaning & Scaling">Teeth Cleaning & Scaling</option>
+                                <option value="Teeth Cleaning & Polishing">Teeth Cleaning & Polishing</option>
                                 <option value="Root Canal Treatment">Root Canal Treatment</option>
                                 <option value="Dental Implants">Dental Implants</option>
                                 <option value="Braces & Aligners">Braces & Aligners</option>
                                 <option value="Teeth Whitening">Teeth Whitening</option>
                                 <option value="Pediatric Dentistry">Pediatric Dentistry</option>
+                                <option value="Dental Crown & Bridges">Dental Crown & Bridges</option>
                                 <option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
                                 <option value="Emergency Dental Care">Emergency Dental Care</option>
                                 <option value="General Consultation">General Consultation</option>
@@ -1597,7 +1601,7 @@
                         <div class="contact-icon">⏰</div>
                         <div class="contact-details">
                             <h4>Working Hours</h4>
-                            <p>Monday - Sunday<br>10:00 AM – 8:00 PM</p>
+                            <p>Monday - Saturday<br>10:00 AM – 8:00 PM</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -1614,7 +1618,12 @@
                     </div>
                 </div>
                 <div class="contact-map animate-on-scroll">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.0!2d74.23!3d16.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDQyJzAwLjAiTiA3NMKwMTMnNDguMCJF!5e0!3m2!1sen!2sin!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps?q=Dento+Dental,+Manohar+Shrushti,+Phulewadi,+Kolhapur,+Maharashtra+416010&t=&z=17&ie=UTF8&iwloc=B&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="border:0; touch-action: auto;"></iframe>
+                    <div style="margin-top: 15px; text-align: center;">
+                        <a href="https://maps.app.goo.gl/1K4Z5t7t6m1VTXdT6" target="_blank" class="btn btn-primary" style="display: inline-flex; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: white;">
+                            <span>📍</span> Open in Google Maps
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1650,11 +1659,11 @@
                 <div class="footer-links-section">
                     <h4>Our Services</h4>
                     <ul class="footer-links">
-                        <li><a href="#services">Teeth Cleaning</a></li>
+                        <li><a href="#services">Teeth Cleaning & Polishing</a></li>
                         <li><a href="#services">Root Canal</a></li>
                         <li><a href="#services">Dental Implants</a></li>
                         <li><a href="#services">Braces & Aligners</a></li>
-                        <li><a href="#services">Teeth Whitening</a></li>
+                        <li><a href="#services">Dental Crown & Bridges</a></li>
                         <li><a href="#services">Cosmetic Dentistry</a></li>
                     </ul>
                 </div>
@@ -1665,7 +1674,7 @@
                         <li><a href="https://wa.me/9172097196">💬 WhatsApp Us</a></li>
                         <li><a href="https://instagram.com/dento_dental" target="_blank">📷 @dento_dental</a></li>
                         <li><a href="#contact">📍 Kolhapur, MH</a></li>
-                        <li><a href="#contact">⏰ 10AM - 8PM</a></li>
+                        <li><a href="#contact">⏰ Mon-Sat, 10AM - 8PM</a></li>
                     </ul>
                 </div>
             </div>
@@ -1800,3 +1809,4 @@
     </script>
 </body>
 </html>
+
